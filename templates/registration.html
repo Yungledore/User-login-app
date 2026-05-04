@@ -4,47 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="../static/styles/style.css" />
   </head>
   <body>
-    <div align="center">
-      <div align="center" class="border">
-        <div class="header">
-          <h1 class="word">Register</h1>
-        </div>
-        <h2 class="word">
-          <form action="/register" method="POST">
-            <div class="msg">{{msg}}</div>
+    <div class="container">
+      <header class="header">
+        <h1 class="word">Register</h1>
+      </header>
+      <main class="border">
+        <form action="/register" method="POST">
+          <div class="msg">{{msg}}</div>
+
+          <div class="input-group">
+            <label for="username">Username</label>
             <input
               type="text"
               id="username"
               name="username"
               placeholder="Enter your username"
               class="textbox"
+              required
             />
-            <br /><br />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
             <input
-              type="text"
+              type="password"
               id="password"
               name="password"
-              placeholder="Enter your password"
+              placeholder="Enter your Password"
               class="textbox"
+              required
             />
-            <br /><br />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               placeholder="Enter your Email"
               class="textbox"
+              required
             />
-            <input type="submit" value="Sign up" class="btn" /> <br /><br />
-          </form>
-        </h2>
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
         <p class="bottom">
-          already have account? <a class="bottom" href="/login">Sign in here</a>
+          Already have an account?
+          <a href="/login" class="bottom"> Sign in here </a>
         </p>
-      </div>
+      </main>
     </div>
   </body>
 </html>
